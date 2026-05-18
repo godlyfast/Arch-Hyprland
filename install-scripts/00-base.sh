@@ -13,8 +13,8 @@ base=(
   archlinux-keyring
   findutils
   rsync
-  socat   # needed for Tak0 scripts
-  ddcutil # Needed for ExternalBrightness script
+  socat   # Needed for Tak0 script
+  ddcutil # needed for external brightness script
 )
 
 ## WARNING: DO NOT EDIT BEYOND THIS LINE IF YOU DON'T KNOW WHAT YOU ARE DOING! ##
