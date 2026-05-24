@@ -3,6 +3,29 @@
 ## May 2026
 
 - Fixed:
+  - Set whiptail to dark colors
+    - On some terminals/systems the light colored text was unreadable
+  - Hightlight button `OK/Cancel` changed colors for readablity
+  - `auto-install.sh`
+    - The script would got a git pull if Distro-Hyprland directory exsited
+    - If user started with JakooLit installer it would not get updated code
+    - Changed to remove `Distro-Hyprland` and do fresh git clone
+
+  - Added:
+
+- `install-scripts/update-deps.sh`
+  - This will make sure all dependencies are up to date
+  - As new features are added to the dotfiles, this will keep deps in sync
+- `install-scripts/wallust.sh`
+  - Some Arch distros are shipping `wallust v4.0.0-alpha`
+  - That is not backwardly compatible to `v3.5.x`
+  - All the theme code will have to be updated
+  - It removes `wallust` from the install script
+  - The `wallust.sh` will check for v4.x and remove it
+    - Then install `wallust v3.5.2` from bundled source
+    - It will add `wallust` to the `IgnorePkg` list in `/etc/pocman.conf`
+  - If still at `wallust v3.5.2` it will just add to `IgnorePkg`
+- `socat` to fix `Tak0` scripts
   - Some scripts not executable
   - Set dark theme for whiptail fixes colors washed out on some terminals
     - Removed some duplicate colors
