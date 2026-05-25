@@ -13,6 +13,10 @@
 
   - Added:
 
+- `install-scripts/wallust.sh`
+  - This will verify the version of wallust v3.5.x
+    - If v4.0.x it will uninstall it and install v3.5.2
+  - It will also pin wallust in `/etc/pacman.conf`
 - `install-scripts/update-deps.sh`
   - This will make sure all dependencies are up to date
   - As new features are added to the dotfiles, this will keep deps in sync
